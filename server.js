@@ -8,9 +8,9 @@ app.use(express.json());
 app.use(cors()); // Permite chamadas do frontend
 
 // Configurações do GitHub (agora seguras no servidor)
-const GITHUB_OWNER = 'SEU_USUARIO_GITHUB';
-const GITHUB_REPO = 'SEU_REPOSITORIO';
-const GITHUB_TOKEN = 'SEU_PERSONAL_ACCESS_TOKEN';
+const GITHUB_OWNER = 'Vtrmalu';
+const GITHUB_REPO = 'sonhodourado';
+const GITHUB_TOKEN = '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';
 
 app.post('/api/create-github-file', async (req, res) => {
     const { path, content, message } = req.body;
@@ -47,4 +47,5 @@ app.post('/api/create-github-file', async (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
